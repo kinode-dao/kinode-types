@@ -1,0 +1,19 @@
+[package]
+name = "kinode-types"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+anyhow = "1.0.71"
+reqwest = { version = "0.11.22", features = ["blocking"] }
+tokio = { version = "1.28", features = ["macros"] }
+
+[dependencies]
+lazy_static = "1.4.0"
+rand = "0.8.4"
+ring = "0.16.20"
+serde = "1.0"
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "1.28", features = ["sync"] }
+wasmtime = "15.0.1"
