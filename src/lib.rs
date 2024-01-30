@@ -1358,3 +1358,16 @@ pub enum PythonResponse {
     Run,
     Err(String),
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub enum MessageType {
+    Request,
+    Response,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct KinodeExtWSMessage {
+    pub id: u64,
+    pub message_type: MessageType,
+    pub blob: Vec<u8>,
+}
