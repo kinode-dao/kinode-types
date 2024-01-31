@@ -1366,8 +1366,8 @@ pub enum MessageType {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct KinodeExtWSMessage {
+pub struct WebSocketExtPushData {
     pub id: u64,
-    pub message_type: MessageType,
+    pub kinode_message_type: MessageType,
     pub blob: Vec<u8>,
 }
