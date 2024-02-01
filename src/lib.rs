@@ -1358,3 +1358,18 @@ pub enum PythonResponse {
     Run,
     Err(String),
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub enum MessageType {
+    Request,
+    Response,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub enum HttpServerAction {
+    WebSocketExtPushData {
+        id: u64,
+        kinode_message_type: MessageType,
+        blob: Vec<u8>,
+    }
+}
